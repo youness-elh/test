@@ -1,3 +1,4 @@
 import openturns as ot
 
-p = Point(3)
+p = ot.Point(3)
+p

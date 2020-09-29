@@ -24,6 +24,10 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
+    - name : install package
+      run: |
+        pip install numpy
+        pip install openturns
     - name: Test
       run: |
-        echo run the tests here
+        python ot.py

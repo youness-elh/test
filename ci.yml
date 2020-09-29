@@ -6,7 +6,8 @@ on:
   pull_request:
     branches:
       - masterjobs:
-  build:    runs-on: ${{ matrix.os }}
+  build:
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         python-version: [2.7, 3.6, 3.7, 3.8]

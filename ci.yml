@@ -6,14 +6,19 @@ on:
   pull_request:
     branches:
       - master
+
 jobs:
   build:
+
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         python-version: [2.7, 3.6, 3.7, 3.8]
         os: [ubuntu-latest, macos-latest, windows-latest]
-    steps:    - uses: actions/checkout@v2
+
+    steps:
+
+    - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
       with:
@@ -21,9 +26,3 @@ jobs:
     - name: Test
       run: |
         echo run the tests here
-
-
-Message #csmi-2020
-Return to sendShift + Return to add a new line
-Slack needs your permission to 
-.

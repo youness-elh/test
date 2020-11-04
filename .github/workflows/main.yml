@@ -28,10 +28,10 @@ jobs:
 
       - name: commit
         run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "github-actions"
-        git add sample.pdf
-        git commit -m "Auto updating od sample.pdf"
+          git config --local user.email "action@github.com"
+          git config --local user.name "github-actions"
+          git add sample.pdf
+          git commit -m "Auto updating od sample.pdf"
       
       - name: push
         run: git push

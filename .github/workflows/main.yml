@@ -16,19 +16,22 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # PREMIERE OPTION
-      # Runs a single command using the runners shell
-      - name: Install xelatex
-        run : |
-          sudo apt-get install texlive-xetex
+      - name: install xelatex
+        run : sudo apt-get install texlive-xetex
 
-      # Runs a set of commands using the runners shell
       - name: Compile sample.tex
         run: xelatex ./sample.tex
-        
+
+      - name: commit
+        run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "github-actions"
+        git add sample.pdf
+        git commit -m "Auto updating od sample.pdf"
+      
+      - name: push
+        run: git push

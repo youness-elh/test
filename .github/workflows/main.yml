@@ -26,7 +26,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Install xelatex
         run : |
-          apt-get install texlive-xetex
+          sudo apt-get install texlive-xetex
 
       # Runs a set of commands using the runners shell
       - name: Compile sample.tex

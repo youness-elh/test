@@ -20,8 +20,15 @@ RUN apt-get update && \
     apt-get autoclean && apt-get --purge --yes autoremove && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ADD entrypoint.sh /entrypoint.sh
+RUN npm install
 
-RUN chmod +x /entrypoint.sh
+EXPOSE 2368
+VOLUME /app/logs
 
-ENTRYPOINT ["/entrypoint.sh"]
+CMD npm run start
+
+#ADD entrypoint.sh /entrypoint.sh
+
+#RUN chmod +x /entrypoint.sh
+
+#ENTRYPOINT ["/entrypoint.sh"]

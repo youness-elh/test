@@ -31,4 +31,4 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Compile sample.tex
-        run: latex ./sample.tex
+        run: xelatex ./sample.tex

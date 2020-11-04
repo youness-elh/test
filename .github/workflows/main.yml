@@ -3,13 +3,12 @@
 name: CI
 
 # L'intégration continue se déclanche lors d'un pull_request
-# et un push du fichier sample.tex
+# et uniquement au push du fichier sample.tex
 on:
   push:
     branches: [ master ]
     paths:
       - './sample.tex'
-      - './README.md'
 
   pull_request:
     branches: [ master ]

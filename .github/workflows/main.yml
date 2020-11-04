@@ -26,6 +26,9 @@ jobs:
       - name: Compile sample.tex
         run: xelatex ./sample.tex
 
+      - name: remove file .pdf in .gitignore
+        run: sed -i '/.*\.pdf/d' ./.gitignore
+
       - name: commit
         run: |
           git config --local user.email "action@github.com"

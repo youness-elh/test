@@ -43,6 +43,6 @@ jobs:
       #  run: xelatex ./sample.tex
       
       # TROISIEME OPTION - build un docker et dans ce docker il y aura la compilation des latex
-      #- name: Build Dockerfile
+      #- name: Build Dockerfile 
         run: docker 
       

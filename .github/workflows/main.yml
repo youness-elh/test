@@ -22,27 +22,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # PREMIERE OPTION - installer directement xelatex
+      # PREMIERE OPTION
       # Runs a single command using the runners shell
       - name: Install xelatex
-        run : sudo apt-get install texlive-xetex
+        run : |
+          apt-get install texlive-xetex
 
       # Runs a set of commands using the runners shell
       - name: Compile sample.tex
         run: xelatex ./sample.tex
-      
-      # DEUXIEME OPTION - build un docker qui contient xelatex
-      # Runs a single command using the runners shell
-      #- name: Build Dockerfile
-      #  run: |
-      #    docker build -t ocr-docker-build .
-      #    docker run -d -p 2368:2368 ocr-docker-build
-
-      # Runs a set of commands using the runners shell
-      #- name: Compile sample.tex
-      #  run: xelatex ./sample.tex
-      
-      # TROISIEME OPTION - build un docker et dans ce docker il y aura la compilation des latex
-      #- name: Build Dockerfile 
-        run: docker 
-      
+        

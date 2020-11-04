@@ -22,11 +22,14 @@ RUN apt-get update && \
 
 RUN npm install
 
+# DEUXIEME OPTION
+
 EXPOSE 2368
 VOLUME /app/logs
 
 CMD npm run start
 
+# TROISIEME OPTION
 #ADD entrypoint.sh /entrypoint.sh
 
 #RUN chmod +x /entrypoint.sh

@@ -24,10 +24,8 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Docker Latex et Compilation
-        run: |
-          docker build -t ocr-docker-build .
-          xelatex ./sample.tex
+        run: docker build -t ocr-docker-build .
 
       # Runs a set of commands using the runners shell
-      #- name: Compile sample.tex
-      #  run: xelatex ./sample.tex
+      - name: Compile sample.tex
+        run: latex ./sample.tex

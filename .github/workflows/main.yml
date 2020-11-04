@@ -37,7 +37,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "github-actions"
           git add sample.pdf
-          git commit -m "Auto updating od sample.pdf"
+          git commit -m "Auto updating of sample.pdf"
       
       - name: push
         run: git push

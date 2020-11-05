@@ -7,7 +7,7 @@ name: CI
 on:
   push:
     branches: [ master ]
-    paths-ignore:
+    paths:
       - '**/sample.tex'
 
   pull_request:

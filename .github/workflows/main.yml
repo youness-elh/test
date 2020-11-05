@@ -8,7 +8,7 @@ on:
   push:
     branches: [ master ]
     paths:
-      - '**/sample.tex'
+      - './sample.tex'
 
   pull_request:
     branches: [ master ]
